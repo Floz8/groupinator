@@ -40,22 +40,36 @@
     
    
 
-    <p> <?php
-
+    <div> <?php
+     session_start(); 
      $count=0;
      $p1 = new Personne("Martin", "Dupont");
      $p2= new Personne("Philippe", "Durand");
      $p3 = new Personne("John", "Doe");
      $p4 = new Personne("Alice","Bob");
+     $p5 = new Personne("Victor","Johnson");
+     $p6 = new Personne("Charles","Gerard");
 
-     $liste_all=[$p1,$p2,$p3,$p4];
+     $liste_all=[$p1,$p2,$p3,$p4,$p5,$p6];
      shuffle($liste_all);
      foreach($liste_all as $personne){
     echo($personne->getFirstName() ." " . $personne -> getLastname()." ");
      $count++; 
      }
      echo $count;
+     $_SESSION['liste'] = $liste_all;
      ?>
+
+     
+    </div>
+     <form action="affichage.php" method="post">
+
+     <h1> Nombre de groupes </h1>
+     <input type="number" name="nbgroupe" id="nbgroupe"> </input>
+     
+     <button type="submit" name="valider" id="valider">Valider</button>
+     
+     </form>
 
 
 </body>
