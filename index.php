@@ -51,14 +51,11 @@
      $liste_all=[$p1,$p2,$p3,$p4];
      shuffle($liste_all);
      foreach($liste_all as $personne){
-     echo($personne->getFirstName());
+    echo($personne->getFirstName() ." " . $personne -> getLastname());
      $count++; 
      }
      echo $count;
      ?>
-
-     
-
 
 
 </body>
