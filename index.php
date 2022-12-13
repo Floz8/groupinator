@@ -15,8 +15,10 @@
     public $firstname;
     public $lastname;
 
-    function Personne($firstname,$lastname){
-        
+    function __construct($prenom,$nom)
+    {
+        $this->firstname = $prenom;
+        $this->lastname = $nom;
     }
     
     function setName($firstname, $lastname) {
@@ -41,6 +43,7 @@
      $p2= new Personne("Philippe", "Durand");
      $p3 = new Personne("John", "Doe");
      $p4 = new Personne("Alice","Bob");
-     var_dump($p1); ?> </p>
+     
+     echo($p1->getFirstName()); ?>
 </body>
 </html>
