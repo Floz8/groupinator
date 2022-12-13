@@ -44,6 +44,9 @@
      $p3 = new Personne("John", "Doe");
      $p4 = new Personne("Alice","Bob");
      
-     echo($p1->getFirstName()); ?>
+     echo($p1->getFirstName() +"" + $p1 -> getLastname()); ?>
+     echo($p2->getFirstName() +"" + $p2 -> getLastname()); ?>
+     echo($p3->getFirstName() +"" + $p3 -> getLastname()); ?>
+     echo($p4->getFirstName() +"" + $p4 -> getLastname()); ?>
 </body>
 </html>
