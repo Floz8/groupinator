@@ -10,11 +10,37 @@
 <body>
     
     <?php 
-    use Groupinator\Personne;
-    $p1 = new Personne("Martin, Dupont");
-    $p2= new Personne("Philippe, Durand");
-    $p3 = new Personne("John", "Doe");
+   class Personne {
+
+    public $firstname;
+    public $lastname;
+
+    function Personne($firstname,$lastname){
+        
+    }
+    
+    function setName($firstname, $lastname) {
+        $this->firstname = $firstname;
+        $this->lastname = $lastname;
+    }
+    
+    function getFirstName() {
+        return $this->firstname;
+    }
+    function getLastname(){
+        return $this->lastname;
+    }
+    
+    }
+   
 
     ?>
+
+    <p> <?php
+     $p1 = new Personne("Martin", "Dupont");
+     $p2= new Personne("Philippe", "Durand");
+     $p3 = new Personne("John", "Doe");
+     $p4 = new Personne("Alice","Bob");
+     var_dump($p1); ?> </p>
 </body>
 </html>
